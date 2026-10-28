@@ -1,0 +1,23 @@
+name: testPush
+
+on:
+  push:
+      branches: [prog2]
+
+  jobs:
+    build: 
+      runs-on: ubuntu-laster
+      permission:
+        contents: write
+
+      steps:
+        name: Chekout repo
+        uses: actions/checkout@v7
+
+        name: Commint and push changes 
+        uses: stefanzwei/git-auto-commit-action@v7
+        whit: 
+            commint_message: Archivos actualizados #Archi
+            commint_user_name: prog2
+            commint_user_email: L23070019@hutamo.tecnm.mx
+            commint_author: Jeremy Shafikc
